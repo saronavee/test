@@ -14,7 +14,7 @@ pipeline {
 		}
 		stage ('Maven build') {
 			steps {
-				sh 'mvn -U-f bss-pom.xml clean'
+				sh 'mvn -U-f bss-pom.xml clean install'
 			}
 		}
 	}
