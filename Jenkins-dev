@@ -1,0 +1,13 @@
+pipeline {
+	agent {
+		label 'demonode'
+	}
+
+	stages{
+		stage ('SCM checkout') {
+			steps {
+				 git branch: 'main', credentialsId: 'santr_github', url: 'https://github.com/saronavee/test.git'
+			}
+		}
+	}
+}
