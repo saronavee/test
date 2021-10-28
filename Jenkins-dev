@@ -2,6 +2,9 @@ pipeline {
 	agent {
 		label 'demonode'
 	}
+	environment {
+		PATH = "/usr/share/maven:$PATH"
+	}
 
 	stages{
 		stage ('SCM checkout') {
