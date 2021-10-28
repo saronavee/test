@@ -9,5 +9,10 @@ pipeline {
 				 git branch: 'main', credentialsId: 'santr_github', url: 'https://github.com/saronavee/test.git'
 			}
 		}
+		stage ('Maven build') {
+			steps {
+				sh 'mvn -U -f bss-pom.xml clean'
+			}
+		}
 	}
 }
